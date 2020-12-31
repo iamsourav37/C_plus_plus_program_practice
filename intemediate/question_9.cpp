@@ -62,5 +62,8 @@ int main()
     else
         cout << "Not a unique number";
 
+    string str = "Hello";
+    cout << "Size of sring " << sizeof(str);
+
     return 0;
 }
