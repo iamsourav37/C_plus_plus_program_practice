@@ -1,12 +1,28 @@
 #include <iostream>
 using namespace std;
-int main()
+
+class StaticExample
 {
 
-    string s(5, 'z');
-    // cin >> s;
-    cout << s << endl;
-    cout << s.length();
+private:
+    int counter;
+    static int counterStatic;
+
+public:
+    void setCounter(int c)
+    {
+        StaticExample::counter = c;
+    }
+    static void setC(int c){
+        StaticExample::counterStatic = c;
+    }
+};
+
+int main()
+{
+    StaticExample s = StaticExample();
+
+    s.setC(1);
 
     return 0;
 }
