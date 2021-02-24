@@ -1,28 +1,25 @@
 #include <iostream>
+#include<string.h>
 using namespace std;
 
-class StaticExample
-{
 
-private:
-    int counter;
-    static int counterStatic;
-
-public:
-    void setCounter(int c)
-    {
-        StaticExample::counter = c;
-    }
-    static void setC(int c){
-        StaticExample::counterStatic = c;
-    }
-};
 
 int main()
 {
-    StaticExample s = StaticExample();
+    
+    int x = 8;
 
-    s.setC(1);
+    int *p = &x;
+    int **q = &p;
 
+    cout<<&x<<endl;
+    cout<<p<<endl;
+    cout<<*q;
+
+
+
+
+
+    
     return 0;
 }
