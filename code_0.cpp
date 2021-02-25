@@ -3,18 +3,29 @@
 using namespace std;
 
 
+void swap(int &a, int &b){ // reference variable
+    int t = a;
+    a = b;
+    b = t;
+}
+
 
 int main()
 {
     
-    int x = 8;
+   int a, b;
 
-    int *p = &x;
-    int **q = &p;
+   cout<<"enter a : ";
+   cin>>a;
+   cout<<"enter b : ";
+   cin>>b;
 
-    cout<<&x<<endl;
-    cout<<p<<endl;
-    cout<<*q;
+   swap(a,b);
+
+   cout<<"\nafter swaping\n";
+
+   cout<<"a is : "<<a<<endl;
+   cout<<"b is : "<<b<<endl;
 
 
 
